@@ -15,8 +15,6 @@ function App() {
     const text = window.getSelection().toString().trim();
     if (text) {
       setSelectedText(text);
-      alert(`You selected: "${text}"`);
-      console.log(selectedText);
     }
   };
 
@@ -28,9 +26,17 @@ function App() {
     >
       <header className="App-header">
         <p>
-          Drag some text in this area and release the mouse button to see an
-          alert. 드래그를 해보자 얍!
+          Drag some text in this area and release the mouse button to see the
+          selected text below. 드래그를 해보자 얍!
         </p>
+
+        {selectedText && (
+          <div className="selected-text">
+            <p>
+              You selected: <strong>{selectedText}</strong>
+            </p>
+          </div>
+        )}
       </header>
     </div>
   );
