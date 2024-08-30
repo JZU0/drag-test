@@ -13,7 +13,7 @@ function App() {
   const handleTouchEnd = () => {
     // 터치가 끝날 때 선택된 텍스트를 가져옵니다.
     const text = window.getSelection().toString().trim();
-    if (selectedText) {
+    if (text) {
       setSelectedText(text);
       alert(`You selected: "${selectedText}"`);
     }
