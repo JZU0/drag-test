@@ -11,7 +11,7 @@ function App() {
   };
 
   return (
-    <div className="App" onMouseUp={handleMouseUp} onTouchEnd={handleSelection}>
+    <div className="App" onTouchEnd={handleMouseUp}>
       <header className="App-header">
         <p>
           Drag some text in this area and release the mouse button to see an
