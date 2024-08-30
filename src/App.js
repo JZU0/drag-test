@@ -9,6 +9,7 @@ function App() {
       const text = window.getSelection().toString().trim();
       if (text) {
         alert(`You selected: "${text}"`);
+        window.getSelection().removeAllRanges();
       }
     },
   });
