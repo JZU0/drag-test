@@ -4,8 +4,9 @@ import './App.css';
 function App() {
   const [selectedText, setSelectedText] = useState('');
 
-  const handleTouchStart = () => {
-    // 터치가 시작될 때 선택된 텍스트를 초기화합니다.
+  const handleTouchStart = (event) => {
+    // 터치가 시작될 때 선택된 텍스트를 초기화하고 기본 동작을 막습니다.
+    event.preventDefault();
     setSelectedText('');
   };
 
