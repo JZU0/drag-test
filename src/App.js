@@ -15,7 +15,7 @@ function App() {
     const text = window.getSelection().toString().trim();
     if (text) {
       setSelectedText(text);
-      alert(`You selected: "${selectedText}"`);
+      alert(`You selected: "${text}"`);
     }
   };
 
