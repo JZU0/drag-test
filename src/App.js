@@ -17,6 +17,7 @@ function App() {
       // 드래그가 끝났을 때 선택된 텍스트를 알림으로 보여줍니다.
       if (selectedText) {
         alert(`You selected: "${selectedText}"`);
+        setSelectedText('');
       }
     },
   });
@@ -26,16 +27,9 @@ function App() {
       <header className="App-header">
         <p>
           Drag some text in this area and release the mouse button to see the
-          selected text below. 드래그를 해보자 얍!
+          selected text below. 드래그를 해보자 얍얍!
         </p>
       </header>
-      {selectedText && (
-        <div className="selected-text">
-          <p>
-            You selected: <strong>{selectedText}</strong>
-          </p>
-        </div>
-      )}
     </div>
   );
 }
