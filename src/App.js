@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useGesture } from '@use-gesture/react';
 import './App.css';
 
