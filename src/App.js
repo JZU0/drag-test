@@ -16,6 +16,7 @@ function App() {
     if (text) {
       setSelectedText(text);
       alert(`You selected: "${text}"`);
+      console.log(selectedText);
     }
   };
 
