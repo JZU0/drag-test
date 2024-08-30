@@ -6,18 +6,11 @@ function App() {
   const [selectedText, setSelectedText] = useState('');
 
   const bind = useGesture({
-    onDrag: ({ tap }) => {
-      // 드래그 도중에 텍스트를 감지합니다.
-      const text = window.getSelection().toString().trim();
-      if (text) {
-        setSelectedText(text);
-      }
-    },
     onDragEnd: () => {
       // 드래그가 끝났을 때 선택된 텍스트를 알림으로 보여줍니다.
-      if (selectedText) {
-        alert(`You selected: "${selectedText}"`);
-        setSelectedText('');
+      const text = window.getSelection().toString().trim();
+      if (text) {
+        alert(`You selected: "${text}"`);
       }
     },
   });
