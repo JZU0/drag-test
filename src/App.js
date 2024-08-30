@@ -3,8 +3,6 @@ import { useGesture } from '@use-gesture/react';
 import './App.css';
 
 function App() {
-  const [selectedText, setSelectedText] = useState('');
-
   const bind = useGesture({
     onDragEnd: () => {
       // 드래그가 끝났을 때 선택된 텍스트를 알림으로 보여줍니다.
